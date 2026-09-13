@@ -72,7 +72,7 @@ resource "aws_eks_node_group" "main" {
   node_group_name = "${var.env}-ng"
   node_role_arn   = aws_iam_role.node.arn
   subnet_ids      = var.subnets
-  instance_types  = ["t3.xlarge"]
+  instance_types  = ["t3.small"]
   capacity_type   = "SPOT"
 
 
